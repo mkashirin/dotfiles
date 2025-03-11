@@ -1,0 +1,91 @@
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+indent = { tab-width = 4, unit = "t" }
+formatter = { command = "ruff", args = [
+  "format",
+  "--line-length",
+  "79",
+  "--quiet",
+  "-",
+] }
+auto-format = true
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+
+[[language]]
+name = "zig"
+auto-format = true
+language-servers = ["zls"]
+indent = { tab-width = 4, unit = "t" }
+formatter = { command = "zig", args = ["fmt", "--stdin"] }
+
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+indent = { tab-width = 4, unit = "t" }
+auto-format = true
+formatter = { command = "clang-format", args = ["-style=file"] }
+
+[[language]]
+name = "rust"
+auto-format = true
+language-servers = ["rust-analyzer"]
+indent = { tab-width = 4, unit = "t" }
+formatter = { command = "rustfmt", args = ["--config", "max_width=80"] }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "julia"
+auto-format = true
+language-servers = [ "julia" ]
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.julia]
+command = "julia"
+timeout = 60
+args = [
+  "--startup-file=no",
+  "--history-file=no",
+  "--quiet",
+  "-e",
+  "using LanguageServer; runserver()",
+]
+
+[[language]]
+name = "ocaml"
+language-servers = ["ocamllsp"]
+indent = { tab-width = 4, unit = "t" }
+formatter = { command = "ocamlformat", args = [
+  "-",
+  "--impl",
+  "--enable-outside-detected-project",
+] }
+
+[[language]]
+name = "ocaml-interface"
+language-servers = ["ocamllsp"]
+indent = { tab-width = 4, unit = "t" }
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist", "typst-lsp"]
+indent = { tab-width = 4, unit = "t" }
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "markdown"
+language-servers = [ "marksman", "ltex-ls" ]
+indent = { tab-width = 4, unit = "t" }
+
+# [[language]]
+# name = "json"
+# indent = { tab-width = 4, unit = "t" }
