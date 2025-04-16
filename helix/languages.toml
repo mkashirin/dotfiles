@@ -1,7 +1,7 @@
 [[language]]
 name = "python"
-language-servers = ["pyright"]
-indent = { tab-width = 4, unit = "t" }
+language-servers = ["basedpyright", "ruff"]
+indent = { tab-width = 4, unit = "    " }
 formatter = { command = "ruff", args = [
   "format",
   "--line-length",
@@ -9,22 +9,34 @@ formatter = { command = "ruff", args = [
   "--quiet",
   "-",
 ] }
+file-types = ["py", "ipynb", "pyi"]
 auto-format = true
 
-[language-server.pyright.config.python.analysis]
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio", "-"]
+[language-server.basedpyright.config.basedpyright]
 typeCheckingMode = "basic"
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
 
 [[language]]
 name = "zig"
 auto-format = true
 language-servers = ["zls"]
-indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
 formatter = { command = "zig", args = ["fmt", "--stdin"] }
+
+[language-server.zls]
+command = "zls"
+args = ["--config-path", "~/.config/zls.json"]
 
 [[language]]
 name = "c"
 language-servers = ["clangd"]
-indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
 auto-format = true
 formatter = { command = "clang-format", args = ["-style=file"] }
 
@@ -32,7 +44,7 @@ formatter = { command = "clang-format", args = ["-style=file"] }
 name = "rust"
 auto-format = true
 language-servers = ["rust-analyzer"]
-indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
 formatter = { command = "rustfmt", args = ["--config", "max_width=80"] }
 
 [language-server.rust-analyzer]
@@ -60,7 +72,7 @@ args = [
 [[language]]
 name = "ocaml"
 language-servers = ["ocamllsp"]
-indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
 formatter = { command = "ocamlformat", args = [
   "-",
   "--impl",
@@ -70,12 +82,12 @@ formatter = { command = "ocamlformat", args = [
 [[language]]
 name = "ocaml-interface"
 language-servers = ["ocamllsp"]
-indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "typst"
 language-servers = ["tinymist", "typst-lsp"]
-indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "toml"
@@ -84,8 +96,4 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 [[language]]
 name = "markdown"
 language-servers = [ "marksman", "ltex-ls" ]
-indent = { tab-width = 4, unit = "t" }
-
-# [[language]]
-# name = "json"
-# indent = { tab-width = 4, unit = "t" }
+indent = { tab-width = 4, unit = "    " }
