@@ -1,0 +1,47 @@
+"ui.background" = {}
+"ui.text" = "light_gray"
+"ui.text.focus" = { fg = "white", modifiers = [
+  "bold",
+], underline = { style = "line" } }
+"ui.menu" = { fg = "white" }
+"ui.menu.selected" = { fg = "white", underline = { style = "line" } }
+"ui.popup" = { fg = "white" }
+"ui.menu.scroll" = { fg = "white", bg = "inlay_gray" }
+"ui.bufferline" = { fg = "comment_gray" }
+"ui.bufferline.active" = { fg = "white", modifiers = [
+  "bold",
+], underline = { style = "line" } }
+"ui.virtual.inlay-hint" = { fg = "inlay_gray" }
+"ui.virtual.indent-guide" = { fg = "selection_gray" }
+"ui.virtual.jump-label" = { fg = "white", modifiers = [
+  "bold",
+], underline = { style = "line" } }
+"ui.statusline" = { fg = "white" }
+"ui.statusline.inactive" = { fg = "dim_gray" }
+"ui.selection" = { bg = "selection_gray" }
+"ui.selection.primary" = { bg = "selection_primary_gray" }
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.linenr" = "comment_gray"
+"ui.linenr.selected" = { fg = "white", modifiers = ["bold"] }
+"ui.window" = "comment_gray"
+
+"keyword" = { fg = "white", modifiers = ["bold"] }
+"function" = "white"
+"type" = "light_gray"
+"variable" = "light_gray"
+"variable.other.member" = "light_gray"
+"constant" = "white"
+"string" = "dim_gray"
+"comment" = { fg = "comment_gray" }
+"operator" = "white"
+"punctuation" = "dim_gray"
+"attribute" = "light_gray"
+
+[palette]
+white = "#ffffff"
+light_gray = "#d1d1d1"
+dim_gray = "#808080"
+comment_gray = "#505050"
+inlay_gray = "#666666"
+selection_gray = "#222222"
+selection_primary_gray = "#353535"

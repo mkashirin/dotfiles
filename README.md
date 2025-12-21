@@ -1,3 +1,3 @@
-# Dot Files
+# Dot-Files
 
-This repo has all the dot/config files I use. 
+This repo has all the dot / config files I use. 

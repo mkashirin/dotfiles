@@ -38,7 +38,15 @@ name = "c"
 language-servers = ["clangd"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
-formatter = { command = "clang-format", args = ["-style=file"] }
+formatter = { command = "clang-format", args = ["--style", "{BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never, BinPackArguments: false, AlignAfterOpenBracket: BlockIndent}}"] }
+
+[[language]]
+name = "cpp"
+file-types = ["cpp", "hpp"]
+language-servers = ["clangd"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+formatter = { command = "clang-format", args = ["--style", "{BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never, BinPackArguments: false, AlignAfterOpenBracket: BlockIndent}"] }
 
 [[language]]
 name = "rust"

@@ -1,4 +1,4 @@
-theme = "base16_transparent"
+theme = "grayscale_transparent"
 
 [editor]
 line-number = "relative"

@@ -1,0 +1,50 @@
+{
+  "project_panel": {
+    "dock": "right"
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Base16 Grayscale Dark",
+    "dark": "Base16 Grayscale Dark"
+  },
+  // Straight up default monospace is law.
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "font_style": "normal"
+      },
+      "string": {
+        "font_style": "normal"
+      }
+    }
+  },
+  "ui_font_family": "SF Mono",
+  "ui_font_size": 13,
+  "ui_font_features": { "calt": false },
+  "buffer_font_family": "SF Mono",
+  "buffer_font_size": 13,
+  "buffer_line_height": { "custom": 1.2 },
+  "buffer_font_features": {
+    "calt": false
+  },
+  "terminal": {
+    "line_height": "standard",
+    "font_family": "SF Mono",
+    "font_size": 13
+  },
+  "helix_mode": true,
+  "relative_line_numbers": "enabled",
+  "horizontal_scroll_margin": 4,
+  "vertical_scroll_margin": 5,
+  "scrollbar": { "show": "never" },
+  "sticky_scroll": { "enabled": true },
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-pro"
+    },
+    "model_parameters": []
+  },
+  "show_edit_predictions": false
+}
+
