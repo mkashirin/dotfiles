@@ -4,25 +4,25 @@
 "ui.text" = "light_gray"
 "ui.text.focus" = { fg = "white", modifiers = ["bold"] }
 "ui.menu" = { fg = "white" }
-"ui.menu.selected" = { fg = "white", bg = "inlay_gray",  modifiers = ["bold"] }
+"ui.menu.selected" = { fg = "black", bg = "white", modifiers = ["bold"] }
 "ui.popup" = { fg = "white" }
-"ui.menu.scroll" = { fg = "white", bg = "inlay_gray" }
-"ui.bufferline" = { fg = "comment_gray" }
+"ui.menu.scroll" = { fg = "white", bg = "comment_gray" }
+"ui.bufferline" = "comment_gray"
 "ui.bufferline.active" = { fg = "white", modifiers = ["bold"] }
-"ui.virtual.inlay-hint" = { fg = "inlay_gray" }
+"ui.virtual.inlay-hint" = { fg = "comment_gray" }
 "ui.virtual.indent-guide" = { fg = "selection_gray" }
-"ui.virtual.jump-label" = { fg = "blue", modifiers = [
+"ui.virtual.jump-label" = { fg = "teal", modifiers = [
   "bold",
 ], underline = { style = "line" } }
-"ui.virtual.ruler" = { bg = "comment_gray" }
+"ui.virtual.ruler" = { bg = "selection_gray" }
 "ui.statusline" = { fg = "white" }
 "ui.statusline.inactive" = { fg = "dim_gray" }
-"ui.selection" = { bg = "selection_gray" }
-"ui.selection.primary" = { bg = "selection_primary_gray" }
+"ui.selection" = { fg = "black", bg = "white" }
+"ui.selection.primary" = { fg = "black", bg = "light_gray" }
 "ui.cursor" = { modifiers = ["reversed"] }
 "ui.linenr" = "comment_gray"
 "ui.linenr.selected" = { fg = "white", modifiers = ["bold"] }
-"ui.window" = "comment_gray"
+"ui.window" = "selection_gray"
 
 "keyword" = { fg = "white", modifiers = ["bold"] }
 "function" = "white"
@@ -36,20 +36,23 @@
 "punctuation" = "dim_gray"
 "attribute" = "light_gray"
 
-"diagnostic.error" = { bg = "red" }
-"diagnostic.warning" = { bg = "yellow" }
-"diagnostic.info" = { bg = "dim_gray" }
-"diagnostic.hint" = { bg = "blue" }
+"diagnostic.error" = { fg = "red" }
+"diagnostic.warning" = { fg = "pink" }
+"diagnostic.info" = { fg = "teal" }
+"diagnostic.hint" = { fg = "dim_gray" }
 "error" = { fg = "red", modifiers = ["bold"] }
-"warning" = "yellow"
-"info" = "dim_gray"
-"hint" = "blue"
+"warning" = { fg = "pink" }
+"info" = "teal"
+"hint" = "dim_gray"
 
 [palette]
-white = "#ffffff"
-light_gray = "#d1d1d1"
-dim_gray = "#808080"
-comment_gray = "#505050"
-inlay_gray = "#666666"
-selection_gray = "#222222"
-selection_primary_gray = "#353535"
+black = "#000000"
+selection_gray = "#3f3f3f"
+comment_gray = "#888888"
+dim_gray = "#999999"
+light_gray = "#aaaaaa"
+white = "#c1c1c1"
+
+teal = "#486e6f"
+pink = "#dd9999"
+red = "#a06666"
