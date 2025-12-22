@@ -1,21 +1,20 @@
+# Author: Michael Kashirin <hotmail.mkashirin@gmail.com>
+
 "ui.background" = {}
 "ui.text" = "light_gray"
-"ui.text.focus" = { fg = "white", modifiers = [
-  "bold",
-], underline = { style = "line" } }
+"ui.text.focus" = { fg = "white", modifiers = ["bold"] }
 "ui.menu" = { fg = "white" }
-"ui.menu.selected" = { fg = "white", underline = { style = "line" } }
+"ui.menu.selected" = { fg = "white", bg = "inlay_gray",  modifiers = ["bold"] }
 "ui.popup" = { fg = "white" }
 "ui.menu.scroll" = { fg = "white", bg = "inlay_gray" }
 "ui.bufferline" = { fg = "comment_gray" }
-"ui.bufferline.active" = { fg = "white", modifiers = [
-  "bold",
-], underline = { style = "line" } }
+"ui.bufferline.active" = { fg = "white", modifiers = ["bold"] }
 "ui.virtual.inlay-hint" = { fg = "inlay_gray" }
 "ui.virtual.indent-guide" = { fg = "selection_gray" }
-"ui.virtual.jump-label" = { fg = "white", modifiers = [
+"ui.virtual.jump-label" = { fg = "blue", modifiers = [
   "bold",
 ], underline = { style = "line" } }
+"ui.virtual.ruler" = { bg = "comment_gray" }
 "ui.statusline" = { fg = "white" }
 "ui.statusline.inactive" = { fg = "dim_gray" }
 "ui.selection" = { bg = "selection_gray" }
@@ -36,6 +35,15 @@
 "operator" = "white"
 "punctuation" = "dim_gray"
 "attribute" = "light_gray"
+
+"diagnostic.error" = { bg = "red" }
+"diagnostic.warning" = { bg = "yellow" }
+"diagnostic.info" = { bg = "dim_gray" }
+"diagnostic.hint" = { bg = "blue" }
+"error" = { fg = "red", modifiers = ["bold"] }
+"warning" = "yellow"
+"info" = "dim_gray"
+"hint" = "blue"
 
 [palette]
 white = "#ffffff"
