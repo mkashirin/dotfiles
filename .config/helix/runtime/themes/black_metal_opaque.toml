@@ -26,10 +26,16 @@
 
 "keyword" = { fg = "white", modifiers = ["bold"] }
 "function" = "white"
+"function.builtin" = { fg = "white", modifiers = ["bold"] }
 "type" = "light_gray"
+"type.builtin" = { fg = "light_gray", modifiers = ["bold"] }
 "variable" = "light_gray"
+"variable.builtin" = { fg = "light_gray", modifiers = ["bold"] }
 "variable.other.member" = "light_gray"
 "constant" = "white"
+"constant.builtin" = { fg = "white", modifiers = ["bold"] }
+"tag" = "white"
+"tag.builtin" = { fg = "white", modifiers = ["bold"] }
 "string" = "dim_gray"
 "comment" = { fg = "comment_gray" }
 "operator" = "white"
