@@ -1,0 +1,9 @@
+BasedOnStyle: llvm
+IndentWidth: 4
+UseTab: Never
+BinPackArguments: false
+AlignAfterOpenBracket: BlockIndent
+ContinuationIndentWidth: 4
+BreakBeforeBinaryOperators: All
+AlignOperands: DontAlign
+ColumnLimit: 80
